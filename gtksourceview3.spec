@@ -4,20 +4,17 @@
 %define libname	%mklibname %{oname}- %{api_version} %{lib_major}
 %define libnamedev %mklibname -d %{oname}- %{api_version}
 
-
 Summary:	Source code viewing library
 Name:		gtksourceview3
-Version: 2.90.4
+Version: 2.91.9
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Editors
 URL:		http://people.ecsc.co.uk/~matt/downloads/rpms/gtksourceview/
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{oname}/%{oname}-%{version}.tar.bz2
-Patch: gtksourceview-introspection-enable-warnings.patch
 Buildroot:	%{_tmppath}/%{oname}-%{version}
-BuildRequires:	gtk+3-devel >= 2.3.0
-BuildRequires:  libxml2-devel
-BuildRequires:  glade3-devel
+BuildRequires:	gtk+3-devel >= 3.0.0
+BuildRequires:  libxml2-devel >= 2.6.0
 BuildRequires:  gtk-doc
 BuildRequires:  gobject-introspection-devel
 BuildRequires:  intltool
@@ -52,8 +49,6 @@ GtkSourceView development files
 
 %prep
 %setup -q -n %oname-%version
-%patch -p1 -R
-automake
 
 %build
 
@@ -89,5 +84,3 @@ rm -rf %{buildroot}
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
 %_datadir/gir-1.0/GtkSource-%{api_version}.gir
-
-
