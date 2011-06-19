@@ -6,12 +6,12 @@
 
 Summary:	Source code viewing library
 Name:		gtksourceview3
-Version: 3.0.3
+Version: 3.0.4
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Editors
 URL:		http://people.ecsc.co.uk/~matt/downloads/rpms/gtksourceview/
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{oname}/%{oname}-%{version}.tar.bz2
+Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{oname}/%{oname}-%{version}.tar.xz
 Buildroot:	%{_tmppath}/%{oname}-%{version}
 BuildRequires:	gtk+3-devel >= 3.0.0
 BuildRequires:  libxml2-devel >= 2.6.0
