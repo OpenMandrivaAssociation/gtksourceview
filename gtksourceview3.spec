@@ -27,6 +27,7 @@ GtkSourceView specializes these features for a code editor.
 %package -n %{libname}
 Summary:	Source code viewing library
 Group:		Editors
+Requires:	${name} = %{version}-%{release}
 
 %description -n %{libname}
 GtkSourceview is a library that adds syntax highlighting,
