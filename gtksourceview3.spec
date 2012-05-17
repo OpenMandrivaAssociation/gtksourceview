@@ -37,7 +37,6 @@ GtkSourceView specializes these features for a code editor.
 %package -n %{girname}
 Summary:	GObject Introspection interface description for %{name}
 Group:		System/Libraries
-Requires:	%{libname} = %{version}-%{release}
 
 %description -n %{girname}
 GObject Introspection interface description for %{name}.
@@ -62,7 +61,6 @@ GtkSourceView development files
 %make LIBS='-lgmodule-2.0'
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %{find_lang} %{oname}-%{api}
