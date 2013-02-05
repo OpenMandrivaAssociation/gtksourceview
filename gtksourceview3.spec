@@ -12,7 +12,7 @@ Release:	1
 License:	GPLv2+
 Group:		Editors
 URL:		http://people.ecsc.co.uk/~matt/downloads/rpms/gtksourceview/
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{oname}/3.6/%{oname}-%{version}.tar.xz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{oname}/3.6/%{oname}-%{version}.tar.xz
 BuildRequires:  intltool
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
