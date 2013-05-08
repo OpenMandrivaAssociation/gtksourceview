@@ -1,6 +1,8 @@
+%define url_ver %(echo %{version}|cut -d. -f1,2)
+
+%define oname	gtksourceview
 %define api	3.0
 %define major	0
-%define oname	gtksourceview
 %define libname	%mklibname %{oname}- %{api} %{major}
 %define girname	%mklibname %{oname}-gir %{api}
 %define devname %mklibname -d %{oname}- %{api}
@@ -11,8 +13,8 @@ Version: 	3.6.3
 Release:	1
 License:	GPLv2+
 Group:		Editors
-URL:		http://people.ecsc.co.uk/~matt/downloads/rpms/gtksourceview/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{oname}/3.6/%{oname}-%{version}.tar.xz
+Url:		http://people.ecsc.co.uk/~matt/downloads/rpms/gtksourceview/
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtksourceview/%{url_ver}/%{oname}-%{version}.tar.xz
 BuildRequires:  intltool
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
