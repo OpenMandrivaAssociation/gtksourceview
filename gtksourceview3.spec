@@ -2,15 +2,15 @@
 
 %define oname	gtksourceview
 %define api	3.0
-%define major	0
+%define major	1
 %define libname	%mklibname %{oname}- %{api} %{major}
 %define girname	%mklibname %{oname}-gir %{api}
 %define devname %mklibname -d %{oname}- %{api}
 
 Summary:	Source code viewing library
 Name:		gtksourceview3
-Version: 	3.6.3
-Release:	2
+Version: 	3.8.2
+Release:	1
 License:	GPLv2+
 Group:		Editors
 Url:		http://people.ecsc.co.uk/~matt/downloads/rpms/gtksourceview/
