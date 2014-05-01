@@ -1,4 +1,2 @@
-removed_sources:
-  gtksourceview-3.6.3.tar.xz: 42240d84a9802ef76861bfebecfe676a57b9fcbf
 sources:
-  gtksourceview-3.8.2.tar.xz: fcf066e6b29c63a997d8bbd72bb2cfbce427285d
+  gtksourceview-3.10.2.tar.xz: e886f3c54e01ada2eab8fee14fde2efa3d2c2feb

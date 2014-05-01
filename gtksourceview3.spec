@@ -9,17 +9,17 @@
 
 Summary:	Source code viewing library
 Name:		gtksourceview3
-Version: 	3.8.2
-Release:	5
+Version: 	3.10.2
+Release:	1
 License:	GPLv2+
 Group:		Editors
-Url:		http://people.ecsc.co.uk/~matt/downloads/rpms/gtksourceview/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtksourceview/%{url_ver}/%{oname}-%{version}.tar.xz
-BuildRequires:  intltool
-BuildRequires:  pkgconfig(gobject-introspection-1.0)
+Url:		http://gtksourceview.sourceforge.net/
+Source0:	http://download.gnome.org/sources/gtksourceview/%{url_ver}/%{oname}-%{version}.tar.xz
+BuildRequires:	intltool
+BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
-BuildRequires:  pkgconfig(gtk-doc)
-BuildRequires:  pkgconfig(libxml-2.0)
+BuildRequires:	pkgconfig(gtk-doc)
+BuildRequires:	pkgconfig(libxml-2.0)
 
 %description
 GtkSourceview is a library that adds syntax highlighting,
@@ -59,8 +59,7 @@ GtkSourceView development files
 
 %build
 %configure2_5x
-
-%make LIBS='-lgmodule-2.0'
+%make 
 
 %install
 %makeinstall_std
@@ -83,4 +82,3 @@ GtkSourceView development files
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
 %{_datadir}/gir-1.0/GtkSource-%{api}.gir
-
