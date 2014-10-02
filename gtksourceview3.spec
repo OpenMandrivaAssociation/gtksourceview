@@ -9,8 +9,8 @@
 
 Summary:	Source code viewing library
 Name:		gtksourceview3
-Version: 	3.10.2
-Release:	3
+Version: 	3.14.0
+Release:	1
 License:	GPLv2+
 Group:		Editors
 Url:		http://gtksourceview.sourceforge.net/
@@ -58,7 +58,7 @@ GtkSourceView development files
 %setup -qn %{oname}-%{version}
 
 %build
-%configure2_5x
+%configure2_5x --disable-vala
 %make 
 
 %install
