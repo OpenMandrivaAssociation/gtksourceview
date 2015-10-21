@@ -7,10 +7,12 @@
 %define girname	%mklibname %{oname}-gir %{api}
 %define devname %mklibname -d %{oname}- %{api}
 
+%define _disable_rebuild_configure 1
+
 Summary:	Source code viewing library
 Name:		gtksourceview3
-Version: 	3.16.1
-Release:	3
+Version: 	3.18.1
+Release:	1
 License:	GPLv2+
 Group:		Editors
 Url:		http://gtksourceview.sourceforge.net/
