@@ -10,7 +10,7 @@
 %define _disable_rebuild_configure 1
 
 Summary:	Source code viewing library
-Name:		gtksourceview3
+Name:		gtksourceview
 Version: 	3.24.6
 Release:	1
 License:	GPLv2+
@@ -60,7 +60,7 @@ GtkSourceView development files
 %setup -qn %{oname}-%{version}
 
 %build
-%configure2_5x --disable-vala
+%configure --disable-vala
 %make 
 
 %install
