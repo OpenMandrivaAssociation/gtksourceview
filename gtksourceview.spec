@@ -1,7 +1,7 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
 %define oname	gtksourceview
-%define api	4
+%define api	4.0
 %define major	0
 %define libname	%mklibname %{oname}- %{api} %{major}
 %define girname	%mklibname %{oname}-gir %{api}
@@ -79,7 +79,7 @@ GtkSourceView development files
 %{_libdir}/girepository-1.0/GtkSource-%{api}.typelib
 
 %files -n %{devname}
-#%doc %{_datadir}/gtk-doc/html/gtksourceview-%{api}
+%doc %{_datadir}/gtk-doc/html/gtksourceview-%{api}/*
 %{_libdir}/*.so
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
