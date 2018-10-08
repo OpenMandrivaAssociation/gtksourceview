@@ -1,8 +1,8 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
 %define oname	gtksourceview
-%define api	3.0
-%define major	1
+%define api	4
+%define major	0
 %define libname	%mklibname %{oname}- %{api} %{major}
 %define girname	%mklibname %{oname}-gir %{api}
 %define devname %mklibname -d %{oname}- %{api}
@@ -11,8 +11,8 @@
 
 Summary:	Source code viewing library
 Name:		gtksourceview
-Version: 	3.24.6
-Release:	2
+Version: 	4.0.3
+Release:	1
 License:	GPLv2+
 Group:		Editors
 Url:		http://gtksourceview.sourceforge.net/
@@ -79,7 +79,7 @@ GtkSourceView development files
 %{_libdir}/girepository-1.0/GtkSource-%{api}.typelib
 
 %files -n %{devname}
-%doc %{_datadir}/gtk-doc/html/gtksourceview-%{api}
+%doc %{_datadir}/gtk-doc/html/gtksourceview-%{api}.%{major}/*
 %{_libdir}/*.so
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
