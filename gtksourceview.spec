@@ -79,7 +79,7 @@ GtkSourceView development files
 %{_libdir}/girepository-1.0/GtkSource-%{api}.typelib
 
 %files -n %{devname}
-%doc %{_datadir}/gtk-doc/html/gtksourceview-%{api}%{major}/*
+%doc %{_datadir}/gtk-doc/html/gtksourceview-%{api}.%{major}/*
 %{_libdir}/*.so
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
