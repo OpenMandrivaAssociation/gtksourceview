@@ -12,7 +12,7 @@
 Summary:	Source code viewing library
 Name:		gtksourceview
 Version: 	4.2.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Editors
 Url:		http://gtksourceview.sourceforge.net/
@@ -22,6 +22,8 @@ BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtk-doc)
 BuildRequires:	pkgconfig(libxml-2.0)
+BuildRequires:	pkgconfig(gio-2.0)
+BuildRequires:	pkgconfig(vapigen)
 
 %description
 GtkSourceview is a library that adds syntax highlighting,
@@ -60,11 +62,11 @@ GtkSourceView development files
 %setup -qn %{oname}-%{version}
 
 %build
-%configure --disable-vala
-%make 
+%configure --enable-vala=yes
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %{find_lang} %{oname}-%{api}
 
@@ -84,3 +86,5 @@ GtkSourceView development files
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
 %{_datadir}/gir-1.0/GtkSource-%{api}.gir
+%{_datadir}/vala/vapi/gtksourceview-%{api_version}.deps
+%{_datadir}/vala/vapi/gtksourceview-%{api_version}.vapi
