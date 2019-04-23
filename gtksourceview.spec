@@ -86,5 +86,5 @@ GtkSourceView development files
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
 %{_datadir}/gir-1.0/GtkSource-%{api}.gir
-%{_datadir}/vala/vapi/gtksourceview-%{api_version}.deps
-%{_datadir}/vala/vapi/gtksourceview-%{api_version}.vapi
+%{_datadir}/vala/vapi/gtksourceview-%{api}.deps
+%{_datadir}/vala/vapi/gtksourceview-%{api}.vapi
