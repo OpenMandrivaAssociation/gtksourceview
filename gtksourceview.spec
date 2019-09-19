@@ -11,13 +11,13 @@
 
 Summary:	Source code viewing library
 Name:		gtksourceview
-Version: 	4.2.0
-Release:	2
+Version: 	4.4.0
+Release:	1
 License:	GPLv2+
 Group:		Editors
 Url:		http://gtksourceview.sourceforge.net/
 Source0:	http://download.gnome.org/sources/gtksourceview/%{url_ver}/%{oname}-%{version}.tar.xz
-BuildRequires:	intltool
+BuildRequires:	meson
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtk-doc)
@@ -62,11 +62,11 @@ GtkSourceView development files
 %setup -qn %{oname}-%{version}
 
 %build
-%configure --enable-vala=yes
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %{find_lang} %{oname}-%{api}
 
@@ -81,7 +81,6 @@ GtkSourceView development files
 %{_libdir}/girepository-1.0/GtkSource-%{api}.typelib
 
 %files -n %{devname}
-%doc %{_datadir}/gtk-doc/html/gtksourceview-%{api}.%{major}/*
 %{_libdir}/*.so
 %{_includedir}/*
 %{_libdir}/pkgconfig/*
